@@ -1,0 +1,9 @@
+to play songs, they should be in your static folder! :D
+
+https://stackoverflow.com/questions/51924238/how-to-play-mp3-files-using-html5-in-flask
+
+
+Engineering question:
+
+How do I get each audio tag <audio> to be in the for loop with its corresponding
+song title? Do I need to use a dictionary? ahhh! 

@@ -1,0 +1,64 @@
+body {
+  background-color: #000;
+}
+
+h1 {
+  font-family: "Courier New", Courier, serif;
+  background-color: #3C1A5B;
+  color: #FFF748;
+  margin-left: 0.5em;
+
+}
+
+.header {
+  background-color: #3C1A5B;
+}
+
+.main {
+  border:5px solid #EF5455;
+  margin-bottom: 2em;
+}
+
+.secondary {
+  border:3px solid #EF5455;
+  width:50%;
+  
+}
+
+.intro {
+  font-family: "Courier New", Times, serif;
+  text-align: center;
+  background-color: #3C1A5B;
+  color: #FFF748;
+
+}
+
+ol {
+  border: 0px solid #000;
+  list-style: none;
+  counter-reset: mylist;
+  padding-left: 0px;
+  float:left;
+
+}
+
+li {
+  counter-increment: mylist;
+  font-style:normal;
+  color: #FFF748;
+  padding-left: 1.2em;
+
+}
+
+li:before {
+  border:1px solid #EF5455;
+  background-color: #3C1A5B;
+  margin: 1em;
+  content: counter(mylist);
+  font-style:normal;
+  margin-right:1.2em;
+  width: 1.2em;
+  color: #FFF748;
+  display: inline-block;
+  text-align: center;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="static/pet_friend.css">
+    <title>Pet Friendly - ATX</title>
+  </head>
+  <body>
+    <div class="main header">
+    <h1>PET FRIENDLY<h1>
+    </div>
+      {% block content %}
+
+      <div class="secondary header">
+      <h2 class="intro"> THESE ARE OUR SONGS:</h2>
+
+      <embed type="audio/mpeg" height="100" width="400" src="static/12_8 NO CLICK.mp3">
+        <audio type="audio/mpeg" src="static/PUMBA_1.mp3"></audio>
+    </div>
+
+      <ol id="songs">
+      {% for song, mp3 in song_dict.items() %}
+        <li> {{ song }} : <audio type ="audio/mpeg" src="{{ mp3 }}"></audio></li>
+      {% endfor %}
+      </ol>
+
+      {% endblock %}
+  </body>
+</html>
