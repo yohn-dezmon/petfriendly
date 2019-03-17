@@ -6,4 +6,11 @@ https://stackoverflow.com/questions/51924238/how-to-play-mp3-files-using-html5-i
 Engineering question:
 
 How do I get each audio tag <audio> to be in the for loop with its corresponding
-song title? Do I need to use a dictionary? ahhh! 
+song title? Do I need to use a dictionary? ahhh!
+
+
+<embed type="audio/mpeg" height="100" width="400" src="static/12_8 NO CLICK.mp3">
+  <audio type="audio/mpeg" src="static/PUMBA_1.mp3"></audio>
+
+
+putting a jinja variable as a attribute of an html element?????

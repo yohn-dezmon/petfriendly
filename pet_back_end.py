@@ -22,10 +22,10 @@ def home():
     "12 | 8", "Sage to Your Internet","EB","Drunk Inside",
     "Newnewnew","Fuel Filter","Calling","tight fuck"]
 
-    song_dict = {"Pumba":"/static/PUMBA_1.mp3", "You're Feet":"/static/youre feet mix 1.8.17_1.mp3",
-     "ratatatatata":"/static/ratatat.mp3",
-    "12 | 8":"/static/12_8 NO CLICK.mp3", "Sage to Your Internet":"/static/sage to your internet.mp3",
-    "EB":"/static/EB DEMO MIX NO CLICK.mp3"}
+    song_dict = {"Pumba":'"static/PUMBA_1.mp3"', "You're Feet":'"static/youre feet mix 1.8.17_1.mp3"',
+     "ratatatatata":'"static/ratatat.mp3"',
+    "12 | 8":'"static/12_8 NO CLICK.mp3"', "Sage to Your Internet" : '"static/sage to your internet.mp3"',
+    "EB":'"static/EB DEMO MIX NO CLICK.mp3"'}
 
 
     return render_template("pet_friend.html",
