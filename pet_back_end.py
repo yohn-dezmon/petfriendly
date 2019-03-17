@@ -1,35 +1,22 @@
 # importing the flask class
-from flask import Flask
-from flask import render_template
-# for HTTP METHODS
-from flask import request
-from flask import send_from_directory
+from flask import Flask, render_template, request, send_from_directory
 
-# instantiating the Flask class
-# the first argument is the name of the application's module or package
-# if you using a single module, you should use __name__
 
 app = Flask(__name__)
-
-
 
 # http://localhost:5000/home
 @app.route('/home', methods=['POST', 'GET'])
 def home():
-
-
-    song_list = ["Pumba", "You're Feet", "ratatatatata",
-    "12 | 8", "Sage to Your Internet","EB","Drunk Inside",
-    "Newnewnew","Fuel Filter","Calling","tight fuck"]
 
     song_dict = {"Pumba":'"static/PUMBA_1.mp3"', "You're Feet":'"static/youre feet mix 1.8.17_1.mp3"',
      "ratatatatata":'"static/ratatat.mp3"',
     "12 | 8":'"static/12_8 NO CLICK.mp3"', "Sage to Your Internet" : '"static/sage to your internet.mp3"',
     "EB":'"static/EB DEMO MIX NO CLICK.mp3"'}
 
+    
+
 
     return render_template("pet_friend.html",
-                            song_list = song_list,
                             song_dict = song_dict
                             )
 
