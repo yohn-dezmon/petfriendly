@@ -1,0 +1,5 @@
+http://blog.sahildiwan.com/posts/flask-and-postgresql-app-deployed-on-heroku/
+---
+
+part 3:
+https://www.pythoncentral.io/sqlalchemy-vs-orms/

@@ -1,0 +1,43 @@
+
+https://www.pythoncentral.io/introductory-tutorial-python-sqlalchemy/
+
+Nowadays, programmers can write Object-relational mapping (ORM) programs to remove the necessity of
+writing tedious and error-prone raw SQL statements that are inflexible and hard-to-maintain.
+
+
+ORM is a programming technique for converting data between incompatible type systems in object-
+oriented programming languages...
+
+Usually the type system used in Object Orient language such as python contains
+types that are non-scalar, namely those types cannot be expressed as primitive types
+such as integers and strings... (wait like what?) > EXAMPLE:
+a Person object may have a list of Address objects and a list of PhoneNumber
+objects associated with it... \\
+
+Although simple objects such as PostCodes and StreetNames can be expressed as strings,
+a complex object such as a Address and a Person cannot be expressed using only strings or integers.
+
+In addition, these complex objects may also include instance or class methods that cannot be expressed using a type at all.
+
+In object oriented programming, an object refers to a particular instance of a class...
+where the object can be a combination of variables, functions, and data structures.
+:D
+
+Our previous example can be expressed as an ORM system with a Person class, a Address
+class and a PhoneNumber class, where each class maps to a table in the underlying database.
+
+PYTHON LIBRARY: sqlite3
+INTRO TO SQLite in Python: https://www.pythoncentral.io/introduction-to-sqlite-in-python/
+\\
+
+CRUD - create read update and delete
+
+In the next section, we're going to use SQLAlchemy's declarative to map the Person
+and Address tables into Python classes
+
+3 most important components in writing SQLAlchemy code:
+1. A table that represents a table in a databse
+2. a mapper that maps a python class to a table in a database
+3. a class object that defines how a database record maps to a normal python object....
+
+SQLAlchemy's declarative allows a Table, a mapper and a class object to be defined at once in one class definition.

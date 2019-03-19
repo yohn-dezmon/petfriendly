@@ -1,0 +1,1 @@
+$ . ~/projects/pet_friendly/pet_web/bin/activate

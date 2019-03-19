@@ -1,0 +1,30 @@
+http://blog.sahildiwan.com/posts/flask-and-postgresql-app-deployed-on-heroku/
+
+pip
+virtualenv
+postgres.app
+And obviously Flask + Flask-SQLAlchemy
+
+
+$ createdb pre-pregistration
+
+#open up postgre.app
+
+$ psql
+
+# ensure that pre-registration db is there...
+=# \list
+
+# what does .gitignore do???
+# make a flask environment
+$ mkdir templates
+$ mkdir static
+$ touch app.py
+$ touch .gitignore
+
+
+Open up gitignore file and add
+
+venv
+*.pyc
+.DS_Store

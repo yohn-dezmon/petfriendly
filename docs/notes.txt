@@ -14,3 +14,7 @@ song title? Do I need to use a dictionary? ahhh!
 
 
 putting a jinja variable as a attribute of an html element?????
+
+
+Making a Flask app using a PostgreSQL database and deploying to Heroku
+http://blog.sahildiwan.com/posts/flask-and-postgresql-app-deployed-on-heroku/

@@ -1,0 +1,4 @@
+Trying to understand my flask/python/postgreSQL/SQLalchemy stack ... :D
+
+what is SQLAlchemy, and why can't I just use postgreSQL?
+

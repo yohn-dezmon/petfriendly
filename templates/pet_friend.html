@@ -18,14 +18,11 @@
 
       <ol id="songs">
 
-        <li> Pumba <audio controls class="player"> <source  src="static/PUMBA_1.mp3" type ="audio/mpeg"></audio></li>
-          <li> You're Feet <audio controls class="player"> <source  src="static/youre feet mix 1.8.17_1.mp3" type ="audio/mpeg"></audio></li>
-            <li> Ratatatatata <audio controls class="player"> <source  src="static/ratatat.mp3" type ="audio/mpeg"></audio></li>
-              <li> 12 | 8 <audio controls class="player"> <source  src="static/12_8 NO CLICK.mp3" type ="audio/mpeg"></audio></li>
-                <li> Sage to Your Internet <audio controls class="player"> <source  src="static/sage to your internet .mp3" type ="audio/mpeg"></audio></li>
-                  <li> EB <audio controls class="player"> <source  src="static/EB DEMO MIX NO CLICK.mp3" type ="audio/mpeg"></audio></li>
-
-
+        {% for song, mp3 in song_dict.items() %}
+        <li>{{ song }}:<audio controls class="player">
+                   <source src="{{ url_for('static',filename=mp3) }}" type ="audio/mpeg">
+                   </audio></li>
+          {% endfor %}
       </ol>
 
       {% endblock %}

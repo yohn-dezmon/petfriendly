@@ -4,16 +4,16 @@ from flask import Flask, render_template, request, send_from_directory
 
 app = Flask(__name__)
 
-# http://localhost:5000/home
-@app.route('/home', methods=['POST', 'GET'])
+# http://localhost:5000/
+@app.route('/', methods=['POST', 'GET'])
 def home():
 
-    song_dict = {"Pumba":'"static/PUMBA_1.mp3"', "You're Feet":'"static/youre feet mix 1.8.17_1.mp3"',
-     "ratatatatata":'"static/ratatat.mp3"',
-    "12 | 8":'"static/12_8 NO CLICK.mp3"', "Sage to Your Internet" : '"static/sage to your internet.mp3"',
-    "EB":'"static/EB DEMO MIX NO CLICK.mp3"'}
+    song_dict = {"Pumba":'PUMBA_1.mp3', "You're Feet":'youre feet mix 1.8.17_1.mp3',
+     "ratatatatata":'ratatat.mp3',
+    "12 | 8":'12_8 NO CLICK.mp3', "Sage to Your Internet" : 'sage to your internet .mp3',
+    "EB":'EB DEMO MIX NO CLICK.mp3'}
 
-    
+
 
 
     return render_template("pet_friend.html",
