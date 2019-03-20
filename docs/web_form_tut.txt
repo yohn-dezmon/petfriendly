@@ -1,0 +1,23 @@
+https://www.codementor.io/garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2
+
+We'll do this by adding an HTML form that passes information from the front-end of
+our application (what our users see), through Flask, and to the back-end (our Python code).
+
+
+Notes on <form>:
+
+the action attribute specifies which URL to send data to once the form has been submitted.
+name > specifies the name fo the form.
+
+Notes on <input>:
+
+type > there are many options available, it is the datatype. for name I'm using text
+for email there is a specific email datatype.
+if the type is 'submit', this creates a submit button! whaa...
+alternatively you can use <button> and set its type to submit, and this also creates a submit button.
+
+Notes on <button>:
+
+from the xample, it looks like the text displayed on the button goes between the beginning
+and end tags. In comparison with <input>, where you set the value attribute equal to 'the text you
+want displayed on the button'.

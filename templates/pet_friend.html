@@ -1,30 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="static/pet_friend.css">
-    <title>Pet Friendly - ATX</title>
-  </head>
-  <body>
-    <div class="main header">
-    <h1>PET FRIENDLY<h1>
-    </div>
-      {% block content %}
+{% extends "layout.html" %}
 
-      <div class="secondary header">
-      <h2 class="intro"> THESE ARE OUR SONGS:</h2>
+  {% block form %}
 
-    </div>
-
-      <ol id="songs">
-
-        {% for song, mp3 in song_dict.items() %}
-        <li>{{ song }}:<audio controls class="player">
-                   <source src="{{ url_for('static',filename=mp3) }}" type ="audio/mpeg">
-                   </audio></li>
-          {% endfor %}
-      </ol>
+      <form action="/" method="POST">
+        <div class="input-group">
+             <label for="email">Email:</label> <input id="email" type="email" name="email"><br>
+            <label for "name">Full Name:</label> <input id="name"
+       type="text" name="name"><br>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
 
       {% endblock %}
-  </body>
-</html>

@@ -1,0 +1,23 @@
+Questions:
+
+1. How do I get the css file to refer to a specific html file?
+oh I think I have to have the <link rel="stylesheet" type="text/css" href="static/pet_friend.css">
+set up! :D
+
+
+
+TO DO:
+
+Finish setting up thank_u.html page (by finishign the template inheritance and
+also by finishing the css set up! :D)
+
+Fix pet_friend.html so it's not redundant in reference to the template...
+
+
+Updates:
+
+1. added layout html
+2. added simple form
+3. updated pet_back_end.py a bit to eventually correspond to the thank_u.html page.
+4. read about POST (to server) and GET (to server or to client/browser)
+5. 
