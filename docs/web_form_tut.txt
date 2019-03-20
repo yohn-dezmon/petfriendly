@@ -21,3 +21,14 @@ Notes on <button>:
 from the xample, it looks like the text displayed on the button goes between the beginning
 and end tags. In comparison with <input>, where you set the value attribute equal to 'the text you
 want displayed on the button'.
+
+
+We'll use SQLite through SQLAlchemy
+which provides a higher level abstraction. This means that we could easily use
+a different database, such as PostgreSQL or MariaDB, and we wouldn't need to
+change our codebase.
+SQLAlchemy also allows us to do database level operations in a more Pythonic way.
+
+In line 7, we import Flask's version of SQLAlchemy (we needed to install
+Flask-SQLAlchemy and SQLAlchemy. We only import Flask-SQLAlchemy, as this
+implicitly extends and relies on the base installation of SQLAlchemy).

@@ -1,24 +1,29 @@
-# importing the flask class
+import os
+
 from flask import Flask, render_template, request, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import (Integer)
+
+project_dir = os.path.dirname(os.path.abspath(__file__))
+# line 8 tells sqlite which db we are using
+database_file= "sqlite:///{}".format(os.path.join(project_dir, "fandatabase.db"))
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
-# db = SQLAlchemy(app)
-#
-# class User(db.Model):
-#     __tablename__ = "fans"
-#     id = db.Column(db.Integer, primary_key=True)
-#     email = db.Column(db.String(120), unique=True)
-#     name = db.Column(db.string(200), unique=False)
-#
-#     def __init__(self, email, name):
-#         self.email = email
-#         self.name = name
-# # repr returns '<E-mail email, name name>'
-# # what's up with the <> ??
-#     def __repr__(self):
-#         return '<E-mail {self.email}, name {self.name}>'.format(self=self)
+app.config['SQLALCHEMY_DATABASE_URI'] = database_file # where the db is stored
+
+db = SQLAlchemy(app) # initialize a connection to the database and keep it in the db variable
+
+class Fans(db.Model):
+    __tablename__ = "FanInfo"
+
+    id = db.Column(db.Integer, primary_key=True) # these are called 'attributes'
+    email = db.Column(db.String(120), unique=True, nullable=False, primary_key=False)
+    name = db.Column(db.String(120), unique=False, nullable=False, primary_key=False)
+
+
+    def __repr__(self):
+        return "<Email: {self.email}, Name: {self.name}".format(self=self)
+        # in the above line we define how to represent our fan object as a string.
 
 # http://localhost:5000/
 @app.route('/', methods=['POST', 'GET'])
@@ -30,8 +35,11 @@ def home():
     email = None
     name = None
     if request.method == "POST":
-        email = request.form['email'] # this sets python email equal to the input named 'email'
-        name = request.form['name']
+        email = Fans(email=request.form.get("email"))
+        name = Fans(name=request.form.get("name"))
+        db.session.add(email)
+        db.session.add(name)
+        db.session.commit()
         thank_u = "thank you!! <3"
         return render_template("thank_u.html", thank_u=thank_u,
                                 song_dict=song_dict)
