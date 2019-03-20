@@ -35,10 +35,8 @@ def home():
     email = None
     name = None
     if request.method == "POST":
-        email = Fans(email=request.form.get("email"))
-        name = Fans(name=request.form.get("name"))
-        db.session.add(email)
-        db.session.add(name)
+        email_name = Fans(email=request.form.get("email"), name=request.form.get("name"))
+        db.session.add(email_name)
         db.session.commit()
         thank_u = "thank you!! <3"
         return render_template("thank_u.html", thank_u=thank_u,
