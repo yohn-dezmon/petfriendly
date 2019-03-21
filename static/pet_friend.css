@@ -11,20 +11,8 @@ h1 {
 
 }
 
-h3 {
-  font-family: "Courier New", Courier, serif;
-  background-color: #3C1A5B;
-  color: #FFF748;
-  margin-left: 0.5em;
-  text-align: center;
-}
 
 
-
-
-.query {
-  color: yellow;
-}
 
 .header {
   background-color: #3C1A5B;
@@ -49,25 +37,40 @@ h3 {
 
 }
 
-.thank_u, .Fans, .returnform {
-  display: inline-block;
+.thank_u, h3, .Fans, form {
   float: right;
-  width: 25%;
+  clear: right;
 }
 
 .thank_u {
   border: 1px solid white;
+  width: 300px;
 
+}
+
+h3 {
+  font-family: "Courier New", Courier, serif;
+  background-color: #3C1A5B;
+  color: #FFF748;
+  margin-left: 0.5em;
+  text-align: center;
+  width: 300px;
 }
 
 .Fans {
   border: 1px solid white;
+  width: 500px;
+  background-color: #3C1A5B;
+  margin-left: 0.5em;
+  text-align: center;
 
 }
-.returnform {
+
+form {
   border: 1px solid white;
-  float: right;
+  width:300px;
 }
+
 
 p {
   color: white;
@@ -96,10 +99,7 @@ li {
 
 }
 
-form {
-  float: right;
-  border: 1px solid white;
-}
+
 
 li:before {
   border:1px solid #EF5455;

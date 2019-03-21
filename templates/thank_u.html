@@ -3,10 +3,13 @@
   {% block paragraph %}
   <div class="thank_u"> <p class='thnk_txt'>{{ thank_u }}</p>
   </div>
-  <div class="Fans">
+  {% endblock %}
+
+  {% block paragrap %}
   <h3>Fans</h3>
+  <div class="Fans">
       {% for fan in fans %}
-        <p class="Fans query">{{ fan.name }} :::: {{ fan.email }}</p>
+        <p>{{ fan.name }} :::: {{ fan.email }}</p>
       {% endfor %}
   </div>
 
