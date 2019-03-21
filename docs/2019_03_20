@@ -3,6 +3,9 @@ UPDATES:
 1. I've updated the if request.form == POST portion of my python to be compatible with the
 SQLite db/SQLAlchemy.
 
+QUESTIONS:
+
+1. How to have something float in the center?
 
 --
 Now we are creating the DB in the python shell (since we only need to do it once!).
@@ -10,3 +13,18 @@ Now we are creating the DB in the python shell (since we only need to do it once
 >>> form pet_back_end import db
 >>> db.create_all()
 >>> exit()
+
+--
+For future reference here is how you query the db
+
+PYTHON:
+# this goes inside your flask method ...
+books = Book.query.all()
+   return render_template("home.html", books=books)
+
+HTML:
+
+<h1>Books</h1>
+    {% for book in books %}
+      <p>{{book.title}}</p>
+    {% endfor %}

@@ -39,35 +39,14 @@ def home():
         db.session.add(email_name)
         db.session.commit()
         thank_u = "thank you!! <3"
+        fans = Fans.query.all()
         return render_template("thank_u.html", thank_u=thank_u,
-                                song_dict=song_dict)
+                                song_dict=song_dict, fans=fans)
     else:
+
         return render_template("pet_friend.html",
                                 song_dict = song_dict
                                 )
-
-
-
-
-
-
-
-#uhh... where is this page... OH!
-# http://localhost:5000/hello
-# got it!
-# THIS IS REALLY COOL!
-# This together with hello_form.html creates an official submit form! woo!
-@app.route('/hello', methods=['POST', 'GET'])
-def index():
-    greeting = "Hello World"
-
-    if request.method == "POST":
-        name = request.form['name']
-        greet = request.form['greet']
-        greeting = f"{greet}, {name}"
-        return render_template("index_laid_out.html", greeting=greeting)
-    else:
-        return render_template("hello_form_laid_out.html")
 
 
 
