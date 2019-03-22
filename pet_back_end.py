@@ -60,6 +60,17 @@ def update():
     fans.name = newname
     db.session.commit()
     return redirect("/")
+# http://localhost:5000/delete
+@app.route("/delete", methods=["POST", "GET"])
+def delete():
+    email = request.form.get("email")
+    fans = Fans.query.filter_by(email=email).first()
+    db.session.delete(fans)
+    name = request.form.get("name")
+    fans = Fans.query.filter_by(name=name).first()
+    db.session.delete(fans)
+    db.session.commit()
+    return redirect("/")
 
 
 # only run this script if python app.py is run in the command line
