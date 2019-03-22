@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request, send_from_directory, redirect
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import (Integer)
 
@@ -48,6 +48,18 @@ def home():
                                 song_dict = song_dict
                                 )
 
+@app.route("/update", methods=["POST"])
+def update():
+    newemail = request.form.get("newemail")
+    oldemail = request.form.get("oldemail")
+    fans = Fans.query.filter_by(email=oldemail).first()
+    fans.email = newemail
+    newname = request.form.get("newname")
+    oldname = request.form.get("oldname")
+    fans = Fans.query.filter_by(name=oldname).first()
+    fans.name = newname
+    db.session.commit()
+    return redirect("/")
 
 
 # only run this script if python app.py is run in the command line

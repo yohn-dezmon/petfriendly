@@ -1,0 +1,8 @@
+https://www.codementor.io/garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2
+
+nstead, we need our users to submit an updated title while we keep track of the old title. Then, in our back-end code, we can retrieve the correct book based on the old title and update it to the title submitted by the user.
+
+
+Because the user won't want to type out the old title and the new one, we'll turn every title into its own form. That way, when the user submits the new title, we can automatically get the old title as well. We'll do this with a
+hidden HTML input so that we can retrieve the old title back-end without it
+cluttering up our UI front-end

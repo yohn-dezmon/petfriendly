@@ -8,9 +8,20 @@
   {% block paragrap %}
   <h3>Fans</h3>
   <div class="Fans">
-      {% for fan in fans %}
-        <p>{{ fan.name }} :::: {{ fan.email }}</p>
-      {% endfor %}
+    {% for fan in fans %}
+    <p> {{ fan.email }}, {{ fan.name }} </p>
+      <form action="./update" method="POST">
+        <div class="input-group">
+             <label for="email">Email:</label> <input value ="{{fan.email}}" id="email" type="hidden" name="oldemail">
+             <input value ="{{fan.email}}" id="email" type="email" name="newemail"><br>
+            <label for "name">Full Name:</label> <input id="name" value="{{fan.name}}"
+       type="hidden" name="oldname"><br>
+       <input value="{{fan.name}}" id="name" type="text" name="newname">
+
+            <input type="submit" value="Update">
+        </div>
+    </form>
+{% endfor %}
   </div>
 
   {% endblock %}
