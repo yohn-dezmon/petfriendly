@@ -35,10 +35,15 @@ def home():
     email = None
     name = None
     if request.method == "POST":
-        email_name = Fans(email=request.form.get("email"), name=request.form.get("name"))
-        db.session.add(email_name)
-        db.session.commit()
-        thank_u = "thank you!! <3"
+        try:
+            email_name = Fans(email=request.form.get("email"), name=request.form.get("name"))
+            db.session.add(email_name)
+            db.session.commit()
+            thank_u = "thank you!! <3"
+        except Exception as e:
+            print("Failed to add email and name")
+            print(e)
+            return render_template("pet_friend.html", song_dict=song_dict)
         fans = Fans.query.all()
         return render_template("thank_u.html", thank_u=thank_u,
                                 song_dict=song_dict, fans=fans)
@@ -50,27 +55,22 @@ def home():
 
 @app.route("/update", methods=["POST"])
 def update():
-    newemail = request.form.get("newemail")
-    oldemail = request.form.get("oldemail")
-    fans = Fans.query.filter_by(email=oldemail).first()
-    fans.email = newemail
-    newname = request.form.get("newname")
-    oldname = request.form.get("oldname")
-    fans = Fans.query.filter_by(name=oldname).first()
-    fans.name = newname
-    db.session.commit()
+    try:
+        newemail = request.form.get("newemail")
+        oldemail = request.form.get("oldemail")
+        fans = Fans.query.filter_by(email=oldemail).first()
+        fans.email = newemail
+        newname = request.form.get("newname")
+        oldname = request.form.get("oldname")
+        fans = Fans.query.filter_by(name=oldname).first()
+        fans.name = newname
+        db.session.commit()
+    except Exception as e:
+        print("Failed to update database")
+        print(e)
     return redirect("/")
-# http://localhost:5000/delete
-@app.route("/delete", methods=["POST", "GET"])
-def delete():
-    email = request.form.get("email")
-    fans = Fans.query.filter_by(email=email).first()
-    db.session.delete(fans)
-    name = request.form.get("name")
-    fans = Fans.query.filter_by(name=name).first()
-    db.session.delete(fans)
-    db.session.commit()
-    return redirect("/")
+
+
 
 
 # only run this script if python app.py is run in the command line

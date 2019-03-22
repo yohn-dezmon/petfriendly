@@ -18,15 +18,11 @@
        type="hidden" name="oldname"><br>
        <input value="{{fan.name}}" id="name" type="text" name="newname">
             <input type="submit" value="Update">
-            <form method="POST" action="./delete">
-  <input type="hidden" value="{{fan.email}}" name="email">
-  <input type="hidden" value="{{fan.name}}" name="name">
-  <input type="submit" value="Delete">
-</form>
-        </div>
+
+        </div></div>
     </form>
 {% endfor %}
-  </div>
+  
 
   {% endblock %}
 
