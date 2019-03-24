@@ -2,6 +2,10 @@ Setting up Alembic/connecting to Postgres:
 https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/
 (also part 1 for the .env file)
 
+I used this for somethings... but then I stopped b/c it was frustrating (not telling you which file you're in):
+https://www.learndatasci.com/tutorials/using-databases-python-postgres-sqlalchemy-and-alembic/
+
+
 Setting up my actual additions to the db (SQLAlchemy) Unfortunately this used SQLite:
 https://www.codementor.io/garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2
 

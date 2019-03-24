@@ -37,38 +37,24 @@ h1 {
 
 }
 
-.thank_u, h3, .Fans, form {
+.thank_u, form {
   float: right;
   clear: right;
 }
 
 .thank_u {
   border: 1px solid white;
-  width: 300px;
-
-}
-
-h3 {
-  font-family: "Courier New", Courier, serif;
-  background-color: #3C1A5B;
-  color: #FFF748;
-  margin-left: 0.5em;
-  text-align: center;
-  width: 300px;
-}
-
-.Fans {
-  border: 1px solid white;
-  width: 500px;
-  background-color: #3C1A5B;
-  margin-left: 0.5em;
-  text-align: center;
+  width: 150px;
 
 }
 
 form {
-  border: 1px solid white;
-  width:300px;
+  border: 0px solid white;
+  width:150px;
+}
+
+.returnbut {
+  align: center;
 }
 
 
