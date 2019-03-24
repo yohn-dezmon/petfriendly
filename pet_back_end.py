@@ -1,16 +1,14 @@
-import os
 
 from flask import Flask, render_template, request, send_from_directory, redirect
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import (Integer)
+from sqlalchemy import Integer, Column, String
+import os
 
-project_dir = os.path.dirname(os.path.abspath(__file__))
-# line 8 tells sqlite which db we are using
-database_file= "sqlite:///{}".format(os.path.join(project_dir, "fandatabase.db"))
-
+# CONNECTING TO THE DB
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = database_file # where the db is stored
-
+# ACCESSING THE .ENV FILE (I THINK)
+app.config.from_object(os.environ['APP_SETTINGS'])
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app) # initialize a connection to the database and keep it in the db variable
 
 class Fans(db.Model):
@@ -20,10 +18,13 @@ class Fans(db.Model):
     email = db.Column(db.String(120), unique=True, nullable=False, primary_key=False)
     name = db.Column(db.String(120), unique=False, nullable=False, primary_key=False)
 
+# I didn't include the __init__ suggested in the Data Model portion of the tutorial
+# b/c I'm jot using the JSON thing... db.Column(JSON)
 
     def __repr__(self):
         return "<Email: {self.email}, Name: {self.name}".format(self=self)
         # in the above line we define how to represent our fan object as a string.
+
 
 # http://localhost:5000/
 @app.route('/', methods=['POST', 'GET'])
@@ -44,9 +45,8 @@ def home():
             print("Failed to add email and name")
             print(e)
             return render_template("pet_friend.html", song_dict=song_dict)
-        fans = Fans.query.all()
         return render_template("thank_u.html", thank_u=thank_u,
-                                song_dict=song_dict, fans=fans)
+                                song_dict=song_dict)
     else:
 
         return render_template("pet_friend.html",

@@ -1,0 +1,80 @@
+OK I'm frustrated b/c I've followed so many tutorials but I keep getting stuck
+at the point where I need to actually connect to the database/create tables in the database.
+
+I am not doing this successfully.
+
+It's difficult because most tutorials do not have my exact setup so I'm trying to pick and choose
+what makes sense from those tutorials.
+
+I'm going to use this tutorial now b/c it seems like the setup most similar to what I have...
+https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/
+
+
+THIS IS HOW YOU ADD A DATABASE_URL in TERMINAL (After you've created the db in psl):
+$ export DATABASE_URL="postgresql://localhost/wordcount_dev"
+
+
+
+**
+setting up .env file... (******AUTOENV*****)
+https://realpython.com/flask-by-example-part-1-project-setup/
+**
+
+To set up our application with environment variables, we’re going to use autoenv.
+This program allows us to set commands that will run every time we cd into our
+directory.
+
+
+by adding export DATABASE_URL="postgresql://localhost/fans"
+everytime we cd into this direcotry, it should connect to the fans db! :D
+
+
+Alembic is part of Flask-Migrate to manage database migrations to update a database's schema...
+
+
+After you run the database initialization you will see a new folder called “migrations” in the project. This holds the setup necessary for Alembic to run migrations against the project.
+
+
+AFTER THE MIGRATION THING, THE DB IS NOW READY FOR USE IN OUR APP, WTF YES! :D
+
+You first need to connect to the db in psql! :D
+
+\d >>>> this shows you the details of your table! (the columns)
+** If your table has capital letters, you need escaping in psql for it to parse it correctly
+
+i.e.
+fans=# \d+ "FanInfo"
+
+********* FIXING A CIRCULAR IMPORT ********
+
+----------------------
+
+Question:
+
+When you create a db using psql in the command line, how do you know which server
+you are making that db on?
+
+Notes on psql:
+https://chartio.com/resources/tutorials/how-to-list-databases-and-tables-in-postgresql-using-psql/
+
+postgres is the default database that you connect to when first connecting to postgresql
+
+you can change the database you are connected to by using \c or \connect
+
+i.e.
+
+HomeFolder=# \c fans
+You are now connected to database "fans" as user "HomeFolder".
+
+Once you've connected to a db, you can see which tables are there
+
+\dt
+
+fans=# \dt
+          List of relations
+ Schema |  Name   | Type  |  Owner
+--------+---------+-------+----------
+ public | FanInfo | table | postgres
+
+
+ =====-------======--------

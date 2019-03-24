@@ -1,0 +1,50 @@
+https://www.learndatasci.com/tutorials/using-databases-python-postgres-sqlalchemy-and-alembic/
+
+
+Files from this tutorial:
+1. models.py
+2. config.py
+3. crud.py
+
+Ok I think I need to run these sequentially...
+
+
+
+To create tables, or models, with SQA we create a Python class with the fields that
+define the table, then ask SQA to build those models in our database
+
+
+We need to inherit Base in order to register models with SQA. Without this,
+SQA wouldn't know anything about our models
+
+
+We need a driver called psycopg2 (pip install psycopg2) to let SQA obtain a
+connection to Postgres.
+
+
+In order to connect to this database in Python you will need to remember:
+
+The name of the database - books in our case
+The port - defaults to 5432
+The username - defaults to postgres
+The password you used when creating the server [what was this? either postgres or jesmonddohn]
+
+
+Notice we defined the __repr__ data model. As you'll see later, this will make it more obvious what row of the database we're printing out.
+
+
+CONNECTING TO POSTGRES WITH PYTHON:
+
+please see config.py
+
+
+# my username is postgres
+# my password is jesmonddohn
+# the IP address is localhost (127.0.0.1)
+# the port is 5432
+# and the database name is fans.
+
+THIS TUTORIAL SUCKED! ^^^^
+--------------
+
+https://www.compose.com/articles/using-postgresql-through-sqlalchemy/

@@ -1,0 +1,22 @@
+initialize it (open from launch pad)
+
+$psql -U postgres
+
+# this gets you into the postgres DB. -U is username...
+
+$ \list # this lists all of the DBs
+
+# now create a new database...
+
+$ CREATE DATABASE testdb;
+
+# if it returns CREATE DATABASE that means you created a DB :D
+
+$ \connect testdb; # lets you use the DB...
+
+# how would you delete the DB?
+
+$ DROP DATABASE testdb;
+
+
+$ \dt; # shows you the available tables! :D

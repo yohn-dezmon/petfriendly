@@ -1,0 +1,1 @@
+fans=# SELECT * FROM "FanInfo";

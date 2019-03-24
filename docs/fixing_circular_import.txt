@@ -1,0 +1,13 @@
+https://stackoverflow.com/questions/37871945/failing-to-import-class-from-models-py
+
+since my models.py file imports db from the pet_back_end
+I had to put from models import Fans within the if name
+
+
+
+if __name__ == "__main__":
+    app.run()
+    from models import Fans
+
+
+Instead of at the top of the document like usualy :D :D :D 
