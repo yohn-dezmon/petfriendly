@@ -78,3 +78,10 @@ fans=# \dt
 
 
  =====-------======--------
+
+
+Ideas to improve the website:
+1. Create another form that asks what they think of the music
+2. disable the download button from the players
+3. Figure out how to setup a contact group from a database ... to make a distribution/mailing list.
+4. Put a header on top of the form for the mailing list :D

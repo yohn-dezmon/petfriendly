@@ -1,0 +1,10 @@
+To make a mailing list on GMAIL:
+
+1. Make an account for the band
+2. Connect to psql/the database (fans)
+3. type: COPY "FanInfo" TO '/Users/HomeFolder/projects/pet_friendly/csv_db/test.csv' DELIMITER ',' CSV HEADER;
+but change test.csv to the name of the file you want!
+4. go to contacts on your google account
+5. on the sidebar go to more, then import
+6. import the csv file! :D
+7. https://www.wikihow.com/Make-a-Mailing-List-in-Gmail

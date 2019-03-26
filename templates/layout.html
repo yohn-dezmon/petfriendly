@@ -8,15 +8,16 @@
     {% endblock %}
   </head>
   <body>
-    <div class="main header">
-    <h1>PET FRIENDLY<h1>
-    </div>
-      {% block content %}
 
-      <div class="secondary header">
-      <h2 class="intro"> THESE ARE OUR SONGS:</h2>
 
-    </div>
+
+      {% block title %}
+  <h1>PET FRIENDLY</h1>
+      {% endblock %}
+
+      
+      {% block songlist %}
+      <h2> THESE ARE OUR SONGS:</h2>
 
       <ol id="songs">
 
@@ -26,12 +27,11 @@
                    </audio></li>
           {% endfor %}
       </ol>
+      {% endblock %}
 
       {% block paragraph %}
       {% endblock %}
 
-      {% block paragrap %}
-      {% endblock %}
 
       {% block form %}
       {% endblock %}
@@ -40,6 +40,6 @@
 
 
 
-      {% endblock %}
+
   </body>
 </html>

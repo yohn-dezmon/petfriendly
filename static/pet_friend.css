@@ -6,38 +6,36 @@ h1 {
   font-family: "Courier New", Courier, serif;
   background-color: #3C1A5B;
   color: #FFF748;
-  margin-left: 0.5em;
   text-align: center;
-
-}
-
-
-
-
-.header {
-  background-color: #3C1A5B;
-}
-
-.main {
   border:5px solid #EF5455;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  width: 100%;
 }
 
-.secondary {
-  border:3px solid #EF5455;
-  width:25%;
-
-}
-
-.intro {
+h2 {
   font-family: "Courier New", Times, serif;
   text-align: center;
   background-color: #3C1A5B;
   color: #FFF748;
-
+  border:3px solid #EF5455;
+  width: 200px;
 }
 
-.thank_u, form {
+h2, #songs {
+  float:left;
+  clear: left;
+}
+
+h3 {
+  font-family: "Courier New", Times, serif;
+  text-align: center;
+  background-color: #3C1A5B;
+  color: #FFF748;
+  border:3px solid #EF5455;
+  float: right;
+}
+
+.thank_u, h3, form {
   float: right;
   clear: right;
 }
@@ -51,6 +49,7 @@ h1 {
 form {
   border: 0px solid white;
   width:150px;
+  font-family: "Courier New", Times, serif;
 }
 
 .returnbut {
@@ -78,6 +77,7 @@ label {
 }
 
 li {
+  font-family: "Courier New", Times, serif;
   counter-increment: mylist;
   font-style:normal;
   color: #FFF748;
