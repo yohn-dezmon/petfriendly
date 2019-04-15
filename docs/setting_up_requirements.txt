@@ -1,0 +1,5 @@
+https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1pip
+
+pip install --upgrade jinja2
+
+pip freeze > requirements.txt

@@ -1,4 +1,5 @@
 Setting up Alembic/connecting to Postgres:
+https://realpython.com/flask-by-example-part-1-project-setup/ ***the .env / terminal stuff!
 https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/
 (also part 1 for the .env file)
 
