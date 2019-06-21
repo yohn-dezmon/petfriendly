@@ -1,0 +1,27 @@
+What are bash environment variables?
+
+...
+
+back to this
+https://realpython.com/flask-by-example-part-1-project-setup/
+
+
+he said to run this after creating the .env file and config.py file
+
+$ echo "source `which activate.sh`" >> ~/.bashrc
+$ source ~/.bashrc
+
+WHAT DOES THIS DO THOUGH???
+this refreshes the bashrc
+
+WHAT IS A bashrc FILE??
+.bashrc is a shell script that Bash runs whenever it is started interactively.
+It initializes an interactive shell session.
+You can put any command in that file that you could type at the command prompt...
+wait which file?!?!?!
+the bashrc file...
+but wtf I never made a bashrc file...
+
+
+WHAT DOES echo DO?
+not exactly sure... it returns things and exectures other things echo [options] [string]
