@@ -9,7 +9,7 @@ This project was setup using Flask, jinja2, HTML5, CSS, and Postgres.
 
 i.e. $ python3 pet_back_end.py on the command line.
 This file is the Controller in the Model-View-Controller model. It also provides the connection
-to the Postgres database.
+to the Postgres database. To view the website, go to http://127.0.0.1:5000/ in your local browser after entering in the previously mentioned command.
 
 To understand the **.env** and **config.py** files, please see this tutorial:
 
