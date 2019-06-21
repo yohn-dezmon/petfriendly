@@ -1,4 +1,4 @@
-### Website for my band, "Pet Friendly"
+## Website for my band, Pet Friendly
 
 This is a basic website that hosts some of our songs, and provides a
 form for fans to join our mailing list.
